@@ -1,25 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import styled from "styled-components";
+import Header from "./components/Header";
+import Main from "./components/Main";
+import ThreePanelPage from "./components/pages/ThreePanelPage";
+import ContactPage from "./components/pages/ContactsPage";
 
-function App() {
+
+const AppContainer = styled.div`
+  box-sizing: border-box;
+`;
+
+const App = () => {
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <AppContainer>
+      <Header />
+      <Main />
+      <ThreePanelPage />
+      <ContactPage/>
+    </AppContainer>
   );
-}
+};
 
 export default App;
