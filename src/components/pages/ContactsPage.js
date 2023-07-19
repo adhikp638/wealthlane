@@ -46,7 +46,6 @@ const ContactPage = () => {
 
   return (
     <ContactPanel>
-       <Text>Contact us</Text>
       <ContactEmail href={`mailto:${"support@wealthlane.co"}`}>
         <EmailIcon icon={faEnvelope} />
       </ContactEmail>
