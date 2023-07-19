@@ -133,8 +133,8 @@ const ThreePanelPage = () => {
           <TextWrapper>
             <LargeText>For Employers</LargeText>
             <SmallText>
-            With end-user empowerment one of the key mantras, Wealthlane has an extremely flexible 
-            tax setup engine, fine-grained entitlements, dynamic report configuration capabilities and
+            With end-user empowerment as one of the key mantras, Wealthlane has an extremely flexible 
+            tax setup engine, fine-grained entitlements setup, dynamic report configuration capabilities and
             many other self-service features for end to end Equity Award management.
             </SmallText>
 
