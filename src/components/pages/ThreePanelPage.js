@@ -109,7 +109,7 @@ const ThreePanelPage = () => {
 
   return (
     <Page>
-      <PageHeader data-aos="fade-in">
+      <PageHeader>
         Our unique offering
       </PageHeader>
       <PanelPage>
@@ -119,10 +119,9 @@ const ThreePanelPage = () => {
           </Rectangle>
           <TextWrapper>
             <LargeText>The Wealthlane System</LargeText>
-            <SmallText>Wealthlane is a cloud native platform that is fully greenfield. 
-                It is highly configurable and automated which allows for self service. It was designed with productivity and ease of use in mind. 
-                It has built in integration with HRIS platforms and API based architecture that will seamlessly allow for third party intigrations including AI platforms.
-                
+            <SmallText>Our future proof platform is a highly scalable and secure cloud native offering 
+                       designed with an API first approach enabling accelerated third party integrations 
+                       for payroll data, brokerage, financial reporting solutions and more.      
                 </SmallText>
 
           </TextWrapper>
@@ -134,8 +133,9 @@ const ThreePanelPage = () => {
           <TextWrapper>
             <LargeText>For Employers</LargeText>
             <SmallText>
-                A highly automated system to seamlessly manage Equity awards with a highly configurable tax engine and dynamic reporting. 
-                Access to a broad knowledge base around Equity Compensation.
+            With end-user empowerment one of the key mantras, Wealthlane has an extremely flexible 
+            tax setup engine, fine-grained entitlements, dynamic report configuration capabilities and
+            many other self-service features for end to end Equity Award management.
             </SmallText>
 
           </TextWrapper>
@@ -146,7 +146,13 @@ const ThreePanelPage = () => {
           </Rectangle>
           <TextWrapper>
             <LargeText>For Employees</LargeText>
-            <SmallText>A holistic view of Equity Award portfolio with trading capibilities </SmallText>
+            <SmallText>
+               A one stop shop for managing Equity Awards blended in with other assets in a brokerage 
+               account provided as part of onboarding. 
+               Comprehensive and intituitive dashboards to view current financial health, interactively 
+               model future portfolio value, upcoming vesting events, stay on top of award acceptance 
+               and tax election tasks as well as trade real time from the integrated brokerage account.
+            </SmallText>
 
           </TextWrapper>
         </Panel>

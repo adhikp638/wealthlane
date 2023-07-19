@@ -6,7 +6,6 @@ import Header from "./Header";
 
 const MainContainer = styled.div`
   position: relative;
-  height: 100vh;
 `;
 
 const BackgroundImage = styled.img`
@@ -28,9 +27,9 @@ const ContentContainer = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: flex-start; /* Align content to the top */
-  height: 100%;
   padding: 10% 15%; /* Adjust the padding-top value to move the text closer to the top */
   text-align: center;
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.3)); /* Add a gradient overlay */
 
   @media (max-width: 768px) {
     padding: 15% 10%; /* Adjust the padding-top value for smaller screens */
@@ -99,15 +98,17 @@ const Main = () => {
     <MainContainer>
       <BackgroundImage src={wl_background} alt="Background Image" loaded={imageLoaded} />
       <ContentContainer>
-        <HeaderBodyText loaded={imageLoaded}>Equity Compensation Reimagined - the Wealthlane difference</HeaderBodyText>
+        <HeaderBodyText loaded={imageLoaded}>Wealthlane - Equity Awards Reimagined </HeaderBodyText>
         <MainBodyText loaded={imageLoaded}>
-          Designed to simplify the intricacies of equity compensation, our intuitive platform offers a seamless
-          experience for employers and employees alike. With its cloud-native architecture, our platform ensures
-          scalability, security, and real-time accessibility, allowing you to administer and track equity awards
-          effortlessly. Empower your workforce to embrace their long-term financial wellness through your equity
-          compensation program at
+        A meticulously crafted SaaS solution built from the ground up to cater to 
+        the modern workplace where Equity Awards are increasingly becoming a key differentiator
+        for employee acquisiton, engagement and retention.    
+
+        <br/>
+        <br/>
+          Partner with wealthlane to fully realize the potential of this important offering and 
+          join us as we disrupt the landscape of Equity Awards for today and tomorrow.
         </MainBodyText>
-        <LargeBodyText loaded={imageLoaded}>Wealthlane</LargeBodyText>
       </ContentContainer>
     </MainContainer>
   );
