@@ -109,7 +109,7 @@ const ThreePanelPage = () => {
 
   return (
     <Page>
-      <PageHeader>
+      <PageHeader data-aos="fade-in">
         Our unique offering
       </PageHeader>
       <PanelPage>

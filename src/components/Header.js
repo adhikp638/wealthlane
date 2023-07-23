@@ -67,7 +67,9 @@ const Header = () => {
       {/* <Left> */}
         {/* <BurgerMenu/> */}
       {/* </Left> */}
-      <a href="/"><Logo src={logo_dark}/></a>
+      {/* <a href="/"><Logo src={logo_dark}/></a> */}
+      <Logo src={logo_dark}/>
+
       <Center>
         {/* <Menu layout="row" /> */}
       </Center>

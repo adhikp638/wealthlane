@@ -6,6 +6,16 @@ import Header from "./Header";
 
 const MainContainer = styled.div`
   position: relative;
+  height: 100vh;
+`;
+
+const BackgroundImageContainer = styled.div`
+  position: absolute;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: linear-gradient(rgba(20, 0, 0, 0.4), rgba(20, 0, 0, 0.3)); /* Add a gradient overlay */
 `;
 
 const BackgroundImage = styled.img`
@@ -29,11 +39,12 @@ const ContentContainer = styled.div`
   justify-content: flex-start; /* Align content to the top */
   padding: 10% 15%; /* Adjust the padding-top value to move the text closer to the top */
   text-align: center;
-  background: linear-gradient(rgba(20, 0, 0, 0.4), rgba(20, 0, 0, 0.3)); /* Add a gradient overlay */
 
   @media (max-width: 768px) {
     padding: 15% 10%; /* Adjust the padding-top value for smaller screens */
   }
+
+
 `;
 
 
@@ -96,7 +107,9 @@ const Main = () => {
 
   return (
     <MainContainer>
-      <BackgroundImage src={wl_background} alt="Background Image" loaded={imageLoaded} />
+      <BackgroundImageContainer>
+        <BackgroundImage src={wl_background} alt="Background Image" loaded={imageLoaded} />
+      </BackgroundImageContainer>
       <ContentContainer>
         <HeaderBodyText loaded={imageLoaded}>Wealthlane - Equity Awards Reimagined </HeaderBodyText>
         <MainBodyText loaded={imageLoaded}>
