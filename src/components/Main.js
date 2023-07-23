@@ -15,7 +15,17 @@ const BackgroundImageContainer = styled.div`
   top: 0;
   left: 0;
   width: 100%;
-  background: linear-gradient(rgba(20, 0, 0, 0.4), rgba(20, 0, 0, 0.3)); /* Add a gradient overlay */
+  z-index: 1; /* Set a higher z-index to place it above the BackgroundImage */
+  background: url(${wl_background}) center/cover;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(20, 0, 0, 0.4); /* Add the gradient overlay */
+  }
 `;
 
 const BackgroundImage = styled.img`
@@ -24,27 +34,24 @@ const BackgroundImage = styled.img`
   left: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  object-position: center;
   opacity: ${({ loaded }) => (loaded ? 1 : 0)};
   transition: opacity 0.5s ease-in-out;
+  z-index: -1; /* Set a lower z-index to place it below the overlay */
 `;
 
 const ContentContainer = styled.div`
   position: relative;
-  z-index: 1;
+  z-index: 2; /* Updated z-index to be above BackgroundImageContainer but below BackgroundImage */
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-start; /* Align content to the top */
-  padding: 10% 15%; /* Adjust the padding-top value to move the text closer to the top */
+  justify-content: flex-start;
+  padding: 10% 15%;
   text-align: center;
 
   @media (max-width: 768px) {
-    padding: 15% 10%; /* Adjust the padding-top value for smaller screens */
+    padding: 15% 10%;
   }
-
-
 `;
 
 
@@ -80,6 +87,8 @@ const HeaderBodyText = styled.div`
   @media (max-width: 768px) {
     font-size: 24px;
   }
+
+  text-decoration: underline;
 `;
 
 const LargeBodyText = styled.div`
@@ -111,7 +120,7 @@ const Main = () => {
         <BackgroundImage src={wl_background} alt="Background Image" loaded={imageLoaded} />
       </BackgroundImageContainer>
       <ContentContainer>
-        <HeaderBodyText loaded={imageLoaded}>Wealthlane - Equity Awards Reimagined </HeaderBodyText>
+        <HeaderBodyText loaded={imageLoaded}>Wealthlane <br/> Equity Awards Reimagined </HeaderBodyText>
         <MainBodyText loaded={imageLoaded}>
         A meticulously crafted SaaS solution built from the ground up to cater to 
         the modern workplace where Equity Awards are increasingly becoming a key differentiator
