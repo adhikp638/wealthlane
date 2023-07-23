@@ -147,11 +147,9 @@ const ThreePanelPage = () => {
           <TextWrapper>
             <LargeText>For Employees</LargeText>
             <SmallText>
-               A one stop shop for managing Equity Awards blended in with other assets in a brokerage 
-               account provided as part of onboarding. 
-               Comprehensive and intituitive dashboards to view current financial health, interactively 
-               model future portfolio value, upcoming vesting events, stay on top of award acceptance 
-               and tax election tasks as well as trade real time from the integrated brokerage account.
+            Comprehensive and intitutive dashboards that encourage employee engagement by allowing them
+            to understand their companies equity compensation awards, view current financial health as well as
+            interactively model future value.
             </SmallText>
 
           </TextWrapper>

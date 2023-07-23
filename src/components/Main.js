@@ -29,7 +29,7 @@ const ContentContainer = styled.div`
   justify-content: flex-start; /* Align content to the top */
   padding: 10% 15%; /* Adjust the padding-top value to move the text closer to the top */
   text-align: center;
-  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.3)); /* Add a gradient overlay */
+  background: linear-gradient(rgba(20, 0, 0, 0.4), rgba(20, 0, 0, 0.3)); /* Add a gradient overlay */
 
   @media (max-width: 768px) {
     padding: 15% 10%; /* Adjust the padding-top value for smaller screens */
@@ -107,7 +107,7 @@ const Main = () => {
         <br/>
         <br/>
           Partner with wealthlane to fully realize the potential of this important offering and 
-          join us as we disrupt the landscape of Equity Awards for today and tomorrow.
+          join us as we disrupt the Equity Awards landscape of today and tomorrow.
         </MainBodyText>
       </ContentContainer>
     </MainContainer>

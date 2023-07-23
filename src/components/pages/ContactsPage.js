@@ -36,6 +36,12 @@ const LinkedInIcon = styled(FontAwesomeIcon)`
   margin-left: 10px;
   cursor: pointer;
   margin-top: 2px;
+  content: "blah";
+`;
+
+const LinkedInIconWrapper = styled.div`
+  cursor: pointer;
+  text-decoration: underline;
 `;
 
 const Separator = styled.span`
@@ -48,15 +54,20 @@ const ContactPage = () => {
     <ContactPanel>
       <ContactEmail href={`mailto:${"support@wealthlane.co"}`}>
         <EmailIcon icon={faEnvelope} />
+        <span>support@wealthlane.co</span>
       </ContactEmail>
       <Separator>|</Separator>
-      <LinkedInIcon
-        icon={faLinkedin}
-        size="lg"
-        onClick={() => {
-          window.open("https://www.linkedin.com/company/wealthlane-financial-inc/about/", "_blank");
-        }}
-      />
+      <LinkedInIconWrapper           onClick={() => {
+            window.open("https://www.linkedin.com/company/wealthlane-financial-inc/about/", "_blank");
+          }}>
+        <LinkedInIcon
+          icon={faLinkedin}
+          size="lg"
+
+        />
+        <Separator></Separator>
+        <span>LinkedIn</span>
+      </LinkedInIconWrapper>
     </ContactPanel>
   );
 };
