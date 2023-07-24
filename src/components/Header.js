@@ -34,8 +34,10 @@ const Logo = styled.img`
   top: 20px;
   padding-top: 10px;
   padding-left: 2%;
-  max-width: 40%;
-  max-height: 40%;
+  width: 150px;
+  @media (max-width: 768px) {
+    width: 120px;
+  }
 `;
 
 const Center = styled.div`
@@ -50,6 +52,7 @@ const Center = styled.div`
 
 const Right = styled.div`
   padding-top: 10px;
+  min-width: fit-content;
 `;
 
 const StyledLink = styled.a`
@@ -57,7 +60,7 @@ const StyledLink = styled.a`
   margin-right: 10px;
   margin-left: 10px;
   @media (max-width: 768px) {
-    font-size: 12px;
+    font-size: 14px;
   }
 `
 const Header = () => {
@@ -67,8 +70,8 @@ const Header = () => {
       {/* <Left> */}
         {/* <BurgerMenu/> */}
       {/* </Left> */}
-      {/* <a href="/"><Logo src={logo_dark}/></a> */}
-      <Logo src={logo_dark}/>
+      <a href="/"><Logo src={logo_dark}/></a>
+      {/* <Logo src={logo_dark}/> */}
 
       <Center>
         {/* <Menu layout="row" /> */}
