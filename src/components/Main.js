@@ -6,27 +6,9 @@ import Header from "./Header";
 
 const MainContainer = styled.div`
   position: relative;
-  height: 100vh;
+  margin: auto;
 `;
 
-const BackgroundImageContainer = styled.div`
-  position: absolute;
-  height: 100vh;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 1; /* Set a higher z-index to place it above the BackgroundImage */
-  background: url(${wl_background}) center/cover;
-  &::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(20, 0, 0, 0.4); /* Add the gradient overlay */
-  }
-`;
 
 const BackgroundImage = styled.img`
   position: absolute;
@@ -34,14 +16,15 @@ const BackgroundImage = styled.img`
   left: 0;
   width: 100%;
   height: 100%;
+  object-fit: cover;
+  object-position: center;
   opacity: ${({ loaded }) => (loaded ? 1 : 0)};
   transition: opacity 0.5s ease-in-out;
-  z-index: -1; /* Set a lower z-index to place it below the overlay */
+  z-index: 0; /* Set a lower z-index to place it below the overlay */
 `;
 
 const ContentContainer = styled.div`
   position: relative;
-  z-index: 2; /* Updated z-index to be above BackgroundImageContainer but below BackgroundImage */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -52,8 +35,10 @@ const ContentContainer = styled.div`
   @media (max-width: 768px) {
     padding: 15% 10%;
   }
+  
+  background: rgba(20, 0, 0, 0.3);
+  height: 60vh;
 `;
-
 
 const fadeInAnimation = keyframes`
   from {
@@ -116,9 +101,7 @@ const Main = () => {
 
   return (
     <MainContainer>
-      <BackgroundImageContainer>
         <BackgroundImage src={wl_background} alt="Background Image" loaded={imageLoaded} />
-      </BackgroundImageContainer>
       <ContentContainer>
         <HeaderBodyText loaded={imageLoaded}>Wealthlane <br/> Equity Awards Reimagined </HeaderBodyText>
         <MainBodyText loaded={imageLoaded}>
