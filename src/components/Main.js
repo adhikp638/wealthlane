@@ -6,7 +6,6 @@ import Header from "./Header";
 
 const MainContainer = styled.div`
   position: relative;
-  margin: auto;
 `;
 
 
@@ -37,7 +36,7 @@ const ContentContainer = styled.div`
   }
   
   background: rgba(20, 0, 0, 0.3);
-  height: 60vh;
+  height: 68vh;
 `;
 
 const fadeInAnimation = keyframes`

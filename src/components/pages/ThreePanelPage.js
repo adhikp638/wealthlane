@@ -63,6 +63,7 @@ const SmallText = styled.p`
   padding-left: 20px;
   padding-right: 20px;
   line-height: 1.5;
+  
 `;
 
 const LargeText = styled.div`
