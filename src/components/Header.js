@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from "react";
 import styled from 'styled-components';
-import logo_dark from "../assets/img/wealthlane.svg";
+import logo_dark from "../assets/img/Logo.svg";
 import logo_white from "../assets/img/logowhite.png";
+import logo_alt from "../assets/img/wl_alt_logo_4.jpeg";
+
 import BurgerMenu from "./menu/BurgerMenu";
 import Menu from "./menu/Menu";
 import wl_background from "../assets/img/wealthlane_background_alt4.jpeg";
@@ -11,7 +13,7 @@ const Container = styled.div`
   top: 0;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  // justify-content: space-between;
   height: 40px;
   padding-bottom: 5px;
   z-index: 999;
@@ -22,38 +24,20 @@ const Container = styled.div`
 `;
 
 const Left = styled.div`
-  display: none;
-  top: 10px;
-
-  @media (max-width: 768px) {
-    display: block;
-  }
 `;
 
 const Logo = styled.img`
-  top: 20px;
-  padding-top: 10px;
-  padding-left: 2%;
-  width: 150px;
-  @media (max-width: 768px) {
-    width: 120px;
-  }
+  width: 180px;
+
 `;
 
 const Center = styled.div`
-  top: 10px;
-  display: block;
-  padding-top: 10px;
-
-  @media (max-width: 768px) {
-    display: none;
-  }
+  position: relative;  
+  left: 60px;
+  top: 5px;
 `;
 
-const Right = styled.div`
-  padding-top: 10px;
-  min-width: fit-content;
-`;
+
 
 const StyledLink = styled.a`
   color: black;
@@ -67,20 +51,15 @@ const Header = () => {
 
   return (
     <Container>
-      {/* <Left> */}
-        {/* <BurgerMenu/> */}
-      {/* </Left> */}
-      <a href="/"><Logo src={logo_dark}/></a>
+      <Left>
+        <BurgerMenu/>
+      </Left>
       {/* <Logo src={logo_dark}/> */}
 
       <Center>
-        {/* <Menu layout="row" /> */}
+      <a href="/"><Logo src={logo_dark}/></a>
       </Center>
-      <Right>
-        <StyledLink href="https://wealthlane-customer-uat.wealthlane.co/"> Customer Login</StyledLink>
-        <span>|</span>
-        <StyledLink href="https://wealthlane-participant-uat.wealthlane.co/"> Participant Login</StyledLink>
-      </Right>
+
     </Container>
   );
 };

@@ -6,10 +6,9 @@ const MenuItemWrapper = styled.div`
   cursor: pointer;
   position: relative;
   margin-left: 20px;
-  margin-right: 10px;
+  margin-right: 5px;
   padding-right: 20px;
   font-size: 16px;
-
 
   &::after {
     content: '';
@@ -23,17 +22,16 @@ const MenuItemWrapper = styled.div`
     height: 8px;
     border-style: solid;
     border-width: 1px 1px 0 0;
-    border-color: white;
+    border-color: black;
     //transform-origin: ${({ isOpen }) => (isOpen ? 'center bottom' : 'center center')};
     transition: 0.3s ease-in-out;
   }
- 
 `;
 
 const MenuItemTextWrapper = styled.div`
   display: flex;
   justify-content: space-between;
-  align-items: right;
+  align-ims: right;
 `;
 
 const StyledIcon = styled.div`
@@ -52,6 +50,7 @@ const SubMenu = styled.div`
   margin-left: 10px;
   width: fit-content;
   white-space: nowrap;
+  width: 100%;
 `;
 
 

@@ -5,9 +5,14 @@ const StyledSubMenuItem = styled.a`
   /* Add your desired styles for the sub-menu item */
   display: block;
   text-decoration: none;
-  color: white;
   padding-left: 8px;
-  padding-top: 10px;
+  margin-top: 15px;
+  color: black;
+
+  /* Add hover styles */
+  &:hover {
+    background-color: lightgray;
+  }
 `;
 
 const SubMenuItem = ({ label, link }) => {

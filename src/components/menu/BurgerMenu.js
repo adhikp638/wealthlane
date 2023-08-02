@@ -12,11 +12,12 @@ const Container = styled.div`
   flex-wrap: wrap;
   overflow: hidden;
   display: flex;
+  z-index: -1;
 `;
 
 const BurgerIconWrapper = styled.div`
     position: relative;
-    top: 10px;
+    top: 12px;
     left: 10px;
 `;
 
@@ -28,21 +29,21 @@ const MenuItemOuterContainer = styled.div`
   transition: transform 0.3s;
   width: 100%;
   height: 100%;
-  margin-top: 15px;
+  margin-top: 12px;
   z-index: 999;
 
 `;
 
 const MenuItemInnerContainer = styled.div`
-    flex-basis: 70%;
-    background-color: rgba(0,10,10,1);
+    flex-basis: 50%;
+    // background-color: rgba(0,10,10,1);
+    background-color: rgba(255, 255, 255)
 
 `;
 
 const EmptyRightContainer = styled.div`
-  flex-basis: 30%;
+  flex-basis: 100%;
   background-color: rgba(0,0,0,0.5);
-
 
 `;
 
