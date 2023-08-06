@@ -17,26 +17,42 @@ const Container = styled.div`
   height: 40px;
   padding-bottom: 5px;
   z-index: 999;
-  background-color: rgba(255,255,255,1);
+  // background-color: rgba(255,255,255,1);
+  background-color: rgba(245, 245, 250);
+
   color: black;
   border-bottom: solid 1px rgba(0,10,10,0.5);
 
 `;
 
 const Left = styled.div`
+  display: none;
+
+  @media (max-width: 768px) {
+    display: block;
+  }
 `;
 
 const Logo = styled.img`
   width: 180px;
-
 `;
 
-const Center = styled.div`
+const Right = styled.div`
+  position: relative;  
+  left: 100px;
+  top: 5px;
+  margin-right : auto;
+
+  @media (max-width: 768px) {
+    display: none;
+  }
+`;
+
+const StyledLogo = styled.div`
   position: relative;  
   left: 60px;
   top: 5px;
 `;
-
 
 
 const StyledLink = styled.a`
@@ -56,9 +72,13 @@ const Header = () => {
       </Left>
       {/* <Logo src={logo_dark}/> */}
 
-      <Center>
-      <a href="/"><Logo src={logo_dark}/></a>
-      </Center>
+      <StyledLogo>
+        <a href="/"><Logo src={logo_dark}/></a>
+      </StyledLogo>
+
+      <Right>
+        <Menu />
+      </Right>
 
     </Container>
   );

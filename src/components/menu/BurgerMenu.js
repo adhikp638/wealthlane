@@ -13,11 +13,12 @@ const Container = styled.div`
   overflow: hidden;
   display: flex;
   z-index: -1;
+  
 `;
 
 const BurgerIconWrapper = styled.div`
     position: relative;
-    top: 12px;
+    top: 8px;
     left: 10px;
 `;
 
@@ -30,29 +31,34 @@ const MenuItemOuterContainer = styled.div`
   width: 100%;
   height: 100%;
   margin-top: 12px;
+  margin-left: 5px;
   z-index: 999;
+
 
 `;
 
 const MenuItemInnerContainer = styled.div`
-    flex-basis: 50%;
-    // background-color: rgba(0,10,10,1);
-    background-color: rgba(255, 255, 255)
+ // background-color: rgba(255, 255, 255);
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  min-height: fit content;
 
 `;
 
 const EmptyRightContainer = styled.div`
   flex-basis: 100%;
-  background-color: rgba(0,0,0,0.5);
+  //background-color: rgba(0,0,0,0.5);
 
 `;
 
 const BurgerIcon = styled.div`
   justify-content: center;
-  align-items: center;
+  align-items: top;
   cursor: pointer;
   width: 25px;
   height: 30px;
+  padding: 5px;
 `;
 
 const BurgerLine = styled.div`
@@ -83,8 +89,9 @@ const ThirdLine = styled(BurgerLine)`
 
 
 const EmptyBottomContainer = styled.div`
-    width: 100%;
-    height: 100%;
+  //top: 50px;
+  position: relative;
+  height: 100%;
 `;
 
 const BurgerMenu = () => {
