@@ -1,25 +1,21 @@
-import React from "react";
-import styled from "styled-components";
-import Header from "./components/Header";
-import Main from "./components/Main";
-import ThreePanelPage from "./components/pages/ThreePanelPage";
-import ContactPage from "./components/pages/ContactsPage";
-
-
-const AppContainer = styled.div`
-  box-sizing: border-box;
-`;
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import HomePage from './components/pages/HomePage';
+import ProductPage from './components/pages/ProductPage';
+import Header from './components/Header';
 
 const App = () => {
-
-
   return (
-    <AppContainer>
-      <Header />
-      <Main />
-      <ThreePanelPage />
-      <ContactPage/>
-    </AppContainer>
+    <>
+    <Header/>
+    <Router>
+      <Routes>
+        {/* Define your routes using the Route component */}
+        <Route path="/" element={<HomePage />} />
+        <Route path="/ProductPage" element={<ProductPage />} />
+      </Routes>
+    </Router>
+    </>
   );
 };
 

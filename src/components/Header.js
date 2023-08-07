@@ -50,8 +50,11 @@ const Right = styled.div`
 
 const StyledLogo = styled.div`
   position: relative;  
-  left: 60px;
+  left: 20px;
   top: 5px;
+  @media (max-width: 768px) {
+    left: 60px;
+  }
 `;
 
 

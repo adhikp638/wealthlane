@@ -30,7 +30,7 @@ const MenuItemOuterContainer = styled.div`
   transition: transform 0.3s;
   width: 100%;
   height: 100%;
-  margin-top: 12px;
+  margin-top: 6px;
   margin-left: 5px;
   z-index: 999;
 

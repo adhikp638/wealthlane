@@ -26,6 +26,8 @@ const PanelPage = styled.div`
 
 const Panel = styled.div`
   border: solid 1px rgba(0,10,10,0.3);
+  background-color: rgba(245, 245, 250);
+
   flex: 1;
   min-height: 550px;
   margin: 10px;
