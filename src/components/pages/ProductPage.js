@@ -98,12 +98,16 @@ const Video = styled.video`
 
 const VideoContainerWrapper = styled.div`
     display: flex;
-    width: 100%;
+    width: 50%;
     height: 50vh;
     background-image: url(${system_img});
     background-size: cover;
     background-position: center;
     border: solid 1px rgba(0,10,10,0.3);
+
+    @media (max-width: 768px) {
+        width: 100%;
+      }
 `;
 
 const CustomerDemoDescription = ({ onClick }) => {
