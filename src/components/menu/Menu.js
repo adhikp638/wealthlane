@@ -12,12 +12,8 @@ const MenuWrapper = styled.div`
   justify-content: ${({ fromBurger }) => (fromBurger? '' : 'space-between')};
   // background-color: white;
 
-  background-color: rgba(245, 245, 250);
 
   min-height: ${({ fromBurger }) => (fromBurger ? '100px' : '')};
-
-  height: 25%;
-  border-radius: 5px;
 `;
 
 const Menu = ({ fromBurger }) => {

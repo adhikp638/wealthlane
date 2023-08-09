@@ -7,13 +7,12 @@ const Container = styled.div`
   position: fixed;
   top: 0;
   left: 0;
-  width: 100vw;
-  height: 100vh;
+  // width: 100vw;
+  // height: 100vh;
   flex-wrap: wrap;
   overflow: hidden;
   display: flex;
-  z-index: -1;
-  
+
 `;
 
 const BurgerIconWrapper = styled.div`
@@ -32,7 +31,6 @@ const MenuItemOuterContainer = styled.div`
   height: 100%;
   margin-top: 6px;
   margin-left: 5px;
-  z-index: 999;
 
 
 `;
@@ -43,6 +41,9 @@ const MenuItemInnerContainer = styled.div`
   flex-direction: column;
   flex-grow: 1;
   min-height: fit content;
+  background-color: rgba(245, 245, 250);
+  border-radius: 5px;
+
 
 `;
 

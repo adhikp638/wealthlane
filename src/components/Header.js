@@ -16,7 +16,7 @@ const Container = styled.div`
   // justify-content: space-between;
   height: 40px;
   padding-bottom: 5px;
-  z-index: 999;
+  z-index: 1;
   // background-color: rgba(255,255,255,1);
   background-color: rgba(245, 245, 250);
 
