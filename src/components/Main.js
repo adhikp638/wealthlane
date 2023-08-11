@@ -110,7 +110,7 @@ const Main = () => {
 
         <br/>
         <br/>
-          Partner with wealthlane to fully realize the potential of this important offering and 
+          Partner with Wealthlane to fully realize the potential of this important offering and 
           join us as we disrupt the Equity Awards landscape of today and tomorrow.
         </MainBodyText>
       </ContentContainer>
