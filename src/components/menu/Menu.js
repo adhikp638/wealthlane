@@ -10,7 +10,6 @@ const MenuWrapper = styled.div`
   gap: 10px;
   flex-direction: ${({ fromBurger }) => (fromBurger ? 'column' : 'row')};
   justify-content: ${({ fromBurger }) => (fromBurger? '' : 'space-between')};
-  // background-color: white;
 
 
   min-height: ${({ fromBurger }) => (fromBurger ? '100px' : '')};

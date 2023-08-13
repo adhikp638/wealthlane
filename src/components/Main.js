@@ -72,8 +72,9 @@ const HeaderBodyText = styled.div`
     font-size: 24px;
   }
 
-  text-decoration: underline;
+  //text-decoration: underline;
 `;
+
 
 const LargeBodyText = styled.div`
   line-height: 1.5;

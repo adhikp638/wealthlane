@@ -9,6 +9,7 @@ import Menu from "./menu/Menu";
 import wl_background from "../assets/img/wealthlane_background_alt4.jpeg";
 
 const Container = styled.div`
+  padding-left: 5%;
   position: sticky;
   top: 0;
   display: flex;

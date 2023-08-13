@@ -10,8 +10,8 @@ const Page = styled.div`
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
-  padding-left: 2%;
-  padding-right: 2%;
+  padding-left: 5%;
+  padding-right: 5%;
   margin-bottom: 30px;
 `;
 
