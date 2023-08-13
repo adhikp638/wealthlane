@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import styled, { css } from 'styled-components';
-import abc from "../../assets/video/cust_from_davinci.mp4";
+import abc from "../../assets/video/cust_persona.mp4";
 import system_img  from "../../assets/img/system.jpeg";
 
 const Container = styled.div``;
