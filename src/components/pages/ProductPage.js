@@ -1,20 +1,23 @@
 import React, { useState } from 'react';
 import styled, { css } from 'styled-components';
-import abc from "../../assets/video/cust_persona.mp4";
+import cust_persona from "../../assets/video/cust_persona.mp4";
+import ppt_persona from "../../assets/video/ppt_persona.mp4";
+
 import system_img  from "../../assets/img/system.jpeg";
+import ContactPage from './ContactsPage';
 
 const Container = styled.div``;
 
 const PageContainer = styled.div`
     display: flex;
-    flex-flow: row;
+    flex-flow: column;
     box-sizing: border-box;
     width: 100%;
     padding-left: 50px;
     padding-right: 50px;
     align-items: top;
     justify-content: top;
-    height: 100vh;
+    //height: 100vh;
     margin-left: 3%;
 `;
 
@@ -47,9 +50,19 @@ const HeadingText = styled.div`
     margin-top: 20px;
     display: flex;
     text-align: left;
-    margin-left:3%;
+    margin-left: 3.5%;
 `;
-
+const HeadingText2 = styled.div`
+    font-size: 18px;
+    color: black;
+    border-bottom: solid 1px rgba(0,10,10,0.3);
+    //margin-top: 20px;
+    display: flex;
+    text-align: left;
+    //margin-left:3%;
+    width: fit-content;
+    margin-bottom: 40px;
+`;
 const BodyText = styled.div`
     font-size: 16px;
     color: black;
@@ -112,6 +125,11 @@ const VideoContainerWrapper = styled.div`
       }
 `;
 
+const Spacer = styled.div`
+      height: 40px;
+`;
+
+
 const CustomerDemoDescription = ({ onClick }) => {
     return (
         <VideoDescriptionWrapper>
@@ -164,13 +182,28 @@ const ProductPage = () => {
         <VideoContainerWrapper>
           <VideoContainer isVisible={true}>
             <Video controls controlsList="nodownload">
-              <source src={abc} type="video/mp4" />
+              <source src={cust_persona} type="video/mp4" />
               Your browser does not support the video tag.
             </Video>
           </VideoContainer>
         </VideoContainerWrapper>
 
       </PageContainer>
+      <Spacer/>
+      <PageContainer>
+        <HeadingText2>Wealthlane Participant Portal</HeadingText2>
+        <VideoContainerWrapper>
+          <VideoContainer isVisible={true}>
+            <Video controls controlsList="nodownload">
+              <source src={ppt_persona} type="video/mp4" />
+              Your browser does not support the video tag.
+            </Video>
+          </VideoContainer>
+        </VideoContainerWrapper>
+      </PageContainer>
+      <Spacer/>
+      <ContactPage/>
+
     </Container>
   );
 };
