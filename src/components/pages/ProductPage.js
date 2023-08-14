@@ -15,6 +15,7 @@ const PageContainer = styled.div`
     align-items: top;
     justify-content: top;
     height: 100vh;
+    margin-left: 3%;
 `;
 
 const Top = styled.div`
@@ -46,6 +47,7 @@ const HeadingText = styled.div`
     margin-top: 20px;
     display: flex;
     text-align: left;
+    margin-left:3%;
 `;
 
 const BodyText = styled.div`
@@ -161,7 +163,7 @@ const ProductPage = () => {
         {/* <CustomerDemoDescription onClick={toggleVideoVisibility} /> */}
         <VideoContainerWrapper>
           <VideoContainer isVisible={true}>
-            <Video controls>
+            <Video controls controlsList="nodownload">
               <source src={abc} type="video/mp4" />
               Your browser does not support the video tag.
             </Video>

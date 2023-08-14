@@ -7,9 +7,16 @@ const menuData = [
         { label: "Customer Login", link: "https://wealthlane-customer-uat.wealthlane.co/" },
         ],
     },
+    {
+        menuItem: "Product Page",
+        subMenuItems: [
+        { label: "Demo", link: "/ProductPage" },
+        ],
+    },
+    
     // {
     //     menuItem: "Tools",
-    //     subMenuItems: [{ label: "Data asdfsdfsdfsdffffffffffffff Mapper", link: "/dataMapper" }],
+    //     subMenuItems: [{ label: "Data asdfsdfsdfsdffffffffffffff Mapper", link: "//ProductPage" }],
     // },
     // {
     //     menuItem: "Sandbox Item",

@@ -73,6 +73,8 @@ const SubMenu = styled.div`
   padding-right: ${({ fromBurger }) => (fromBurger ? '' : '15px')};
   padding-left: ${({ fromBurger }) => (fromBurger ? '' : '15px')};
   font-size: 16px;
+  // border: 1px solid gray;
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2); /* Adjust values as needed */
 
 
 `;
