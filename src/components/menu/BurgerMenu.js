@@ -43,7 +43,7 @@ const MenuItemInnerContainer = styled.div`
   min-height: fit content;
   background-color: rgba(245, 245, 250);
   border-radius: 5px;
-
+  border: solid 1px gray;
 
 `;
 

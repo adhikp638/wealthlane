@@ -12,8 +12,8 @@ const StyledSubMenuItem = styled.a`
   margin-bottom: 15px;
   padding-right: 8px;
   color: black;
-
-  // width: 400px;
+  border-radius: 5px;
+  min-width: 100px;
   /* Add hover styles */
   &:hover {
     background-color: lightgray;

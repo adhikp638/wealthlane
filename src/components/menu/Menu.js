@@ -7,12 +7,11 @@ const MenuWrapper = styled.div`
   display: flex;
   width: 100%;
   top: ${({ fromBurger }) => (fromBurger ? '18px' : '')};
-  gap: 10px;
+ // gap: 10px;
   flex-direction: ${({ fromBurger }) => (fromBurger ? 'column' : 'row')};
   justify-content: ${({ fromBurger }) => (fromBurger? '' : 'space-between')};
-
-
-  min-height: ${({ fromBurger }) => (fromBurger ? '100px' : '')};
+  height: auto;
+  margin-bottom: 10px;
 `;
 
 const Menu = ({ fromBurger }) => {

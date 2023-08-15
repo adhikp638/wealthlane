@@ -6,6 +6,7 @@ import SubMenuItem from './SubMenuItem';
 const MenuItemContainer = styled.div`
   padding: 5px;
   border-radius: 5px;
+  
   &:hover {
     background-color: ${({ fromBurger }) => (fromBurger ? '' : 'lightgray')};
 
@@ -62,7 +63,7 @@ const SubMenu = styled.div`
   max-height: ${({ isOpen }) => (isOpen ? '1000px' : '0')};
   opacity: ${({ isOpen }) => (isOpen ? '1' : '0')};
   overflow: hidden;
-  top: ${({ fromBurger }) => (fromBurger ? '' : '35px')};
+  top: ${({ fromBurger }) => (fromBurger ? '' : '40px')};
   transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out; /* Include opacity in the transition */
   width: fit-content;
   white-space: nowrap;
@@ -73,8 +74,9 @@ const SubMenu = styled.div`
   padding-right: ${({ fromBurger }) => (fromBurger ? '' : '15px')};
   padding-left: ${({ fromBurger }) => (fromBurger ? '' : '15px')};
   font-size: 16px;
-  // border: 1px solid gray;
-  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2); /* Adjust values as needed */
+  border: ${({ fromBurger }) => (fromBurger ? '' : '1px solid gray')};
+
+  z-index: ${({ fromBurger }) => (fromBurger ? '999' : '')};
 
 
 `;
