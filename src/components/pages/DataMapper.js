@@ -4,7 +4,7 @@ import styled from "styled-components";
 import DataMapperPythonScript from './DataMapperPythonScript';
 import ExcelMacro from "../../util/DataMapper1.xlsm";
 
-const MY_OPEN_API_KEY = "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";
+const API_KEY = process.env.REACT_APP_OPENAI_API_KEY;
 
 const DataMapper = () => {
   const [response, setResponse] = useState('');
@@ -83,7 +83,7 @@ const DataMapper = () => {
             method: 'POST',
             headers: {
             'Content-Type': 'application/json',
-            'Authorization': `Bearer ${MY_OPEN_API_KEY}`
+            'Authorization': `Bearer ${API_KEY}`
             },
             body: JSON.stringify(payload)
         });
