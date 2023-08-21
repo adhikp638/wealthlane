@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import styled from "styled-components";
 import DataMapperPythonScript from './DataMapperPythonScript';
+import ExcelMacro from "../../util/DataMapper1.xlsm";
 
 const MY_OPEN_API_KEY = "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";
 
@@ -177,6 +178,15 @@ const DataMapper = () => {
             </ol>
           )}
           {/* <p>{body}</p> */}
+          <h1>
+            <a
+              href={ExcelMacro}
+              download="DataMapper1.xlsm"
+              style={{ cursor: 'pointer', textDecoration: 'underline', color: 'blue' }}
+            >
+              Usage Instructions (Excel) - click to download macro enabled Excel file
+            </a>
+          </h1>
         </div>
       )}
 
