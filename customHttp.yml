@@ -1,0 +1,8 @@
+# customHttp.yml
+
+version: 1.0
+headers:
+  - source: "**/*.xlsm" # Match all .xlsm files
+    headers:
+      - key: Content-Type
+        value: application/vnd.ms-excel
