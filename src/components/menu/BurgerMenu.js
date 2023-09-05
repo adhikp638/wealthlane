@@ -5,14 +5,14 @@ import Menu from "./Menu";
 
 const Container = styled.div`
   position: fixed;
-  top: 0;
-  left: 0;
-  // width: 100vw;
-  // height: 100vh;
-  flex-wrap: wrap;
-  overflow: hidden;
-  display: flex;
-
+   top: 0;
+   left: 0;
+  // // width: 100vw;
+  // // height: 100vh;
+  // flex-wrap: wrap;
+  // overflow: hidden;
+  // display: flex;
+  // border: solid;
 `;
 
 const BurgerIconWrapper = styled.div`
@@ -31,7 +31,6 @@ const MenuItemOuterContainer = styled.div`
   height: 100%;
   margin-top: 6px;
   margin-left: 5px;
-
 
 `;
 
@@ -97,12 +96,29 @@ const EmptyBottomContainer = styled.div`
 
 const BurgerMenu = () => {
     const [isOpen, setIsOpen] = useState(null);
+    const containerRef = useRef(null); // Ref to the Container element
 
     const handleMenuClick = () => 
     {
         setIsOpen(!isOpen);
     }
-
+    
+    const handleClickOutside = (event) => {
+      // Check if the click event is outside the Container
+      if (containerRef.current && !containerRef.current.contains(event.target)) {
+        setIsOpen(false);
+      }
+    };
+  
+    useEffect(() => {
+      // Attach event listener when the component mounts
+      document.addEventListener("click", handleClickOutside);
+      // Clean up the event listener when the component unmounts
+      return () => {
+        document.removeEventListener("click", handleClickOutside);
+      };
+    }, []);
+  
     return (
         <Container>
             <BurgerIconWrapper>

@@ -3,6 +3,10 @@ import styled from 'styled-components';
 import logo_dark from "../assets/img/Logo.svg";
 import logo_white from "../assets/img/logowhite.png";
 import logo_alt from "../assets/img/wl_alt_logo_4.jpeg";
+import logo_black from "../assets/img/wl_black_logo1.svg";
+import logo_purple from "../assets/img/wl_logo_purple.png";
+// import logo_black from "../assets/img/wealthlane_logo_black_alt.svg";
+
 
 import BurgerMenu from "./menu/BurgerMenu";
 import Menu from "./menu/Menu";
@@ -35,7 +39,7 @@ const Left = styled.div`
 `;
 
 const Logo = styled.img`
-  width: 180px;
+  height: 30px;
 `;
 
 const Right = styled.div`
@@ -51,10 +55,9 @@ const Right = styled.div`
 
 const StyledLogo = styled.div`
   position: relative;  
-  left: 20px;
   top: 5px;
   @media (max-width: 768px) {
-    left: 60px;
+    left: 40px;
   }
 `;
 

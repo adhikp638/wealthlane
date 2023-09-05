@@ -9,7 +9,7 @@ def load_mapping(mapping_file):
     mapping = {}
     with open(mapping_file, 'r') as file:
         for line in file:
-            master_column, input_column = line.strip().split(' -> ')
+            master_column, input_column = line.strip().split(',')
             mapping[master_column.strip()] = input_column.strip()  # Strip whitespace
     return mapping
 
