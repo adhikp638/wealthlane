@@ -183,7 +183,7 @@ const DataMapper = () => {
           <h1>
             <a
               href={ExcelMacro}
-              download="Data Mapper.xlsm"
+              download
               style={{ cursor: 'pointer', textDecoration: 'underline', color: 'blue' }}
             >
               Usage Instructions (Excel) - click to download macro enabled Excel file
