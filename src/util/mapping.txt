@@ -1,4 +1,0 @@
-Last Name -> Surname
-First Name -> Given Name
-Home Country -> Residence Country
-Work Country -> Employment Country
