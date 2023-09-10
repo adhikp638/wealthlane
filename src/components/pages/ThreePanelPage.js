@@ -25,8 +25,10 @@ const PanelPage = styled.div`
 `;
 
 const Panel = styled.div`
-  border: solid 1px rgba(0,10,10,0.3);
+  //border: solid 1px rgba(0,10,10,0.3);
   background-color: rgba(245, 245, 250);
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3); /* Adjust the values as needed */
+
 
   flex: 1;
   min-height: 550px;
