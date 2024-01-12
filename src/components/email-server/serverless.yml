@@ -1,0 +1,16 @@
+service: wl-email-service
+
+provider:
+  name: aws
+  runtime: nodejs14.x
+
+functions:
+  app:
+    handler: server.emailHandler
+    events:
+      - http:
+          path: /send-email
+          method: POST
+          cors: true
+plugins:
+  - serverless-dotenv-plugin
