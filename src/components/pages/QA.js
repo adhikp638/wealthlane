@@ -5,7 +5,8 @@ import styled from "styled-components";
 
 
 
-const API_KEY = process.env.REACT_APP_OPENAI_API_KEY;
+ const API_KEY = process.env.REACT_APP_OPENAI_API_KEY;
+
 
 const QA = () => {
   const [response, setResponse] = useState('');
@@ -27,9 +28,11 @@ const QA = () => {
         messages: [
           {
             role: "system",
-            content: `You are a helpful assistant that understands the ins and out of equity award administration.
+            content: `You are a helpful assistant that understands the ins and out of equity award administration for 
+                      public companies and what the duties of an equity award administrator in a public company are.
+                      You are well versed on the brokerage aspects of a public company equity plan.
                       You have information about the following react pages (routes) in a equity awards management
-                       application: 
+                       application used by equity award administrators: 
                        /overview
                         /settings
                         /settings/organization-settings/:slug
@@ -213,12 +216,12 @@ const QA = () => {
 const Container = styled.div`
     width: 100%;
     height: 100%;
-    margin-left: 20px;
-    margin-right: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
 
 `;
   return (
-    <Container>
+    
     <div style={{ color: 'black' }}>
       <Link to="/">Go back to Home</Link>
 
@@ -239,7 +242,6 @@ const Container = styled.div`
       {error && <p>Error: {error}</p>}
       
     </div>
-    </Container>
   );
 };
 
