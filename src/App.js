@@ -4,6 +4,7 @@ import HomePage from './components/pages/HomePage';
 import ProductPage from './components/pages/ProductPage';
 import DataMapper from './components/pages/DataMapper';
 import Header from './components/Header';
+import QA from './components/pages/QA';
 
 const App = () => {
   return (
@@ -15,6 +16,8 @@ const App = () => {
         <Route path="/" element={<HomePage />} />
         <Route path="/ProductPage" element={<ProductPage />} />
         <Route path="/DataMapper" element={<DataMapper />} />
+        <Route path="/QA" element={<QA />} />
+
 
       </Routes>
     </Router>
