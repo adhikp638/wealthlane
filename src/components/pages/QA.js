@@ -3,8 +3,9 @@ import { Link } from 'react-router-dom';
 import styled from "styled-components";
 
 
-const API_KEY = process.env.REACT_APP_OPENAI_API_KEY;
 
+
+const API_KEY = process.env.REACT_APP_OPENAI_API_KEY;
 
 const QA = () => {
   const [response, setResponse] = useState('');
@@ -153,14 +154,15 @@ const QA = () => {
                         /reports
 
 
-                      You are able to infer what functionality these pages may provide. Upone User question, you
-                      will use your general knowledge of equity award administration to provide a 3 line answer about 
+                      You are able to infer what functionality these pages may provide related to what
+                      an equity award administrator who uses the system does. Upone User question, you
+                      will use your general knowledge of equity award administration to provide a one paragraph line answer about 
                       what the question means from a equity administration perspective along 
-                      with the path from the list above that would be a page that may be related to their query.
-                      In your response, prepend the path with 
-                      https://wealthlane-customer-uat.wealthlane.co/ , put each link in a newline and do not include any punctuation or extra characters
+                      with url for a page that may be related to their query, the url is https://wealthlane-customer-uat.wealthlane.co/
+                      with the matching path appended to it so it becomes a clickable link, put each link in a newline and do not include any punctuation or extra characters
                       at the end`
           },
+          
           {
             role: "user",
             content: `Question: ${question}`
@@ -208,11 +210,15 @@ const QA = () => {
   };
   
   
-  const Container = styled.div`
-    color: black;
-  `;
+const Container = styled.div`
+    width: 100%;
+    height: 100%;
+    margin-left: 20px;
+    margin-right: 20px;
 
+`;
   return (
+    <Container>
     <div style={{ color: 'black' }}>
       <Link to="/">Go back to Home</Link>
 
@@ -233,6 +239,7 @@ const QA = () => {
       {error && <p>Error: {error}</p>}
       
     </div>
+    </Container>
   );
 };
 
